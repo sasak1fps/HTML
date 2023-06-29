@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function parimp(n){
+            if (n%2 == 0){
+                return "par!"
+            } else{
+                return "impar!"
+            }
+        }
+        console.log(parimp(4))
+
+   function soma(n1,n2){
+    return n1 + n2
+     
+   }
+console.log(soma(5,2))
+
+
+function fatorial(h){ 
+    let fat = 1
+    for ( let c = h ;c > 1  ;c--){
+
+    fat *= c
+    }
+    return fat
+}
+console.log(fatorial(5))
+
+
+function fator(a){
+if (a==1){
+return 1 }
+else{
+    return a*fator(a-1)
+}
+}
+console.log(fator(6))     
+</script>
+</body>
+</html>

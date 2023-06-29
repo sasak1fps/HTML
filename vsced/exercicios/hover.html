@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalizando links</title>
+<style>
+body{font-family: serif;}
+    a{color: white; text-decoration: none;font-weight: bold;}
+     a:visited{ color: purple;}
+     a:hover{color: yellow;text-decoration: underline;}
+     a:active{color: blue; }
+     a::before{content: '  ->  ';}
+     a::after{content: ' [link] '; text-decoration: none; font-weight: normal;color: cornflowerblue;}  
+
+
+
+</style>
+
+
+</head>
+<body>
+    <h1>trabalhando com links</h1>
+    <ul>
+             <li><a href="https://www.youtube.com/watch?v=S-nfqpDjC60" target="_blank">youtube 1.0</a></li>
+             <li><a href="https://www.youtube.com/watch?v=vMlrcOVr7po&list=PLHz_AreHm4dlUpEXkY1AyVLQGcpSgVF8s&index=22" target="_blank">youtube 2.0</a></li>
+             <li><a href="https://www.youtube.com" target="_blank">youtube 3.0</a></li>
+    </ul>
+</body>
+</html>
