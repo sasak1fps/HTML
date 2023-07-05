@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body{background-color: rgb(0, 61, 56);
+            border-collapse: separate;
+            margin: 260px;
+            font-family: Arial, Helvetica, sans-serif ; font-size: 2em; align-items: center; align-self: center; display: flex; justify-content: center; 
+        }
+        td,thead,th, caption{
+            font-family: 'Times New Roman', Times, serif; font-weight: bolder; font-style: normal;
+            table-layout: fixed;
+            text-align: center;
+            margin: 2px;
+            padding: 2px;
+            border: 1px solid rgb(0, 26, 255); 
+        }
+        col.Area{background-color: darkblue;}
+        col.Disciplinas{background-color: brown;}
+        col.media{background-color: aqua;}
+        col.notas{background-color: rgb(9, 255, 62);}
+        col.Grupos{background-color: pink;}
+        col.Nomes{background-color: orangered;}
+        col.filmes{background-color: red;}
+        col.Mulheres{background-color: slateblue;}
+        col.Homens{background-color: yellow;}
+        col.Tolta{background-color: mediumvioletred;}
+    </style>
+</head>
+<body>
+
+    <table>
+        <colgroup>
+            <col class="Grupos"> 
+            <col class="Nomes">
+            <col class="filmes">
+            <col class="Mulheres">
+            <col class="Homens">
+        </colgroup>
+        <caption>Filmes</caption>
+        <thead>
+            <tr>
+                <th scope="col">Grupos</th>
+                <th scope="col">Nomes</th>
+                <th colspan="3" scope="col">filmes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th rowspan="3" scope="col">Mulheres</th>
+                <td>ana</td>
+                <td>alien</td>
+                <td>rabmo</td>
+                <td>indapendece day</td>
+            </tr>
+            <tr>
+                <td>julia</td>
+                <td>nemo</td>
+                <td>vingadore</td>
+                <td>dc</td>
+            </tr>
+            <tr>
+                <td>bia</td>
+                <td>aguaman</td>
+                <td>batmn</td>
+                <td>indiana j</td>
+            </tr>
+            <tr>
+                <th rowspan="3" scope="col">Homens</th>
+                <td>marcos</td>
+                <td>jurrasic</td>
+                <td>lego</td>
+                <td>ben10</td>
+            </tr>
+        <tr>
+            <td>joao</td>
+            <td>faroeste</td>
+            <td>rango</td>
+            <td>superman</td>
+        </tr>
+        <tr>
+            <td>alessandro</td>
+            <td>avengers endgame   </td>
+            <td>flash    </td>
+            <td>godzilla    </td>
+        </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="4" scope="col">Total</th>
+                <td>10000</td>                
+            </tr>
+        </tfoot>
+    </table> 
+
+
+    <table>
+        <colgroup>
+        <col class="Area"> 
+        <col class="Disciplinas">
+        <col class=" notas">
+        <col class="media">
+        </colgroup>
+
+
+
+        <thead>
+            <tr>
+                <th scope="col">Area</th>
+                <th  scope="col">Disciplinas</th>
+                    <th  colspan="1" scope="col">notas <brl>nota2 <brl></th>
+                <th scope="col">media</th> </thead>
+            </tr>
+            <tbody>
+                <tr>
+                    <th rowspan="5">exatas</th>
+                    <tr>
+                        <td>Quimicas</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>logica</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>fisica</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>matematica</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                </tr>
+                <th colspan="5">media exxata</th>
+                <td>0.0</td>
+
+                <tr>
+                    <th rowspan="3">humanas </th>
+                    <tr>
+                        <td>portugues</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                    <tr>
+                        <td>historia</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                        <td>0.0</td>
+                    </tr>
+                </tr>
+                <th colspan="5">media humana</th>
+                <td>0.0</td>
+            </tbody>
+    </table>
+</body>
+</html>
