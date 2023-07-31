@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: block;
+            color: black;
+            background-image: url(../smartfone/imagens/fundo-madeira.jpg);
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+            font-size: 1.5em; font-family: Arial, Helvetica, sans-serif; font-weight: bolder;
+            text-align: center;
+        }
+        section{
+            border: 2px solid transparent;
+            text-align: center;
+            margin: auto;
+            border-radius: 50%;
+            background-image: url(../smartfone/imagens/fundo-madeira.jpg);
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        h1{ 
+            font-weight: bolder;
+           background-color: transparent;
+            font-size: 1em;
+        }
+        legend{
+            background-color:transparent; color: black; border: 2px solid transparent;
+        }
+        fieldset{
+
+            line-height: 1.5em;
+            font-style: oblique;
+            font-size: medium;
+            text-transform: uppercase;
+            text-align: center;
+            border: transparent;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>FORMULARIOS</h1>
+        <form action="cadastro.php" method="post" autocomplete="off" autocapitalize="on">
+
+            <p><label for="nome">NOME: </label><input type="text" name="nome" id="nome" required minlength="5" maxlength="15" placeholder="digite seu nome">  </p>
+
+            <p><label for="email">EMAIL: <input type="email" name="email" id="email" required autocomplete="email"></label></p>
+
+            <p><label for="telefone">TELEFONE: <input type="tel" name="telefone" id="telefone" required autocomplete="telefone" ></label></p>
+
+            <p><label for="SOBRENOME">SOBRENOME:</label> <input type="text" name="SOBRENOME" id="SOBRENOME" 
+            required minlength="5" maxlength="15" placeholder="digite seu SOBRENOME"> </p>
+
+            <p><label for="idade">IDADE: <input type="number" name="idade" id="idade" min="0" max="" step="0.1"
+             placeholder="digite sua idade"   ></label></p>
+
+<p><label for="ano">ANO DE NASC</label> <input type="number" name="ano" id="ano" min="1900" max="2023" oninput="calcano()"></p>
+<p><label for="dade">SUA IDADE È :</label>  <output id="dade">0</output></p>
+
+             <p><label for="NASCIMENTO">NASCIMENTO</label> <input type="date" name="NASCIMENTO" id="NASCIMENTO" value="00-00-0000"></p>
+
+            <p><label for="senha"> SENHA:<input type="password" name="senha" id="senha" required minlength="8" placeholder=" digite sua senha"></label></p>
+
+            <p><input type="submit" value="ENVIAR">     <input type="reset" value="limpar">  </p>
+
+                <fieldset>
+                    <legend>esporte favorito </legend>
+
+                        <input type="color" name="color" id="cor" value="#00ff00">
+                        <label for="cor">cor</label> <br>
+
+                        <p>
+                            <label for="range">NIVEL DE SATISFAÇAO</label> <br>
+                            <input type="range" name="range" id="range" max="10" oninput="valor.innerHTML =Number(range.value)">
+                            
+                            <output id="valor">5</output>
+                        </p>
+
+                        <input type="checkbox" name="basquete" id="basquete">
+                         <label for="basquete">basquete</label> <br>
+                         <input type="checkbox"name="futebol"id="futebol">    
+                         <label for="futebol">futebol</label> <br>
+                         <input type="checkbox" name="volei" id="volei">
+                         <label for="volei">volei</label> <br>
+                         <input type="checkbox" name="golf" id="golf">
+                         <label for="golf">golf</label>       <br>
+                         <input type="checkbox" name="luta" id="luta">
+                         <label for="luta">luta</label> <br>
+                         <input type="checkbox" name="natacao" id="natacao">
+                         <label for="natacao">natacao</label> <br>     
+
+                        <input type="submit" value="envia">
+                        <input type="reset" value="limpar">
+                </fieldset>
+                
+                <p>
+                    <label for="estados">ESTADOS</label>
+                <select name="estados" id="estados">
+                    <option value="" selected>---escoha---</option>
+                    <optgroup label="regiao sul">
+                        <option value="rj">RIO DE JANEIRO</option>
+                        <option value="sp">SAO PAULO</option>
+                        <option value="mg">MINAS GERAIS</option>
+                    </optgroup>
+                    <optgroup label="regiao norte">
+                        <option value="ST">SANTOS</option>
+                        <option value="RGN">RIO GRANDE DO NORTE</option>
+                        <option value="RGS">RIO GRANDE DO SUL</option>
+                    </optgroup>  
+                </select> </p>
+                        
+                    <p>
+                        <label for="profissao">profissao</label>
+                        <input type="text" name="profissao" id="profissao" list="prof">
+                        <datalist id="prof">
+                            <option >admin</option>
+                            <option  >professor</option>
+                            <option  >engenheiro</option>
+                            <option  >programador</option>
+                        </datalist>
+                    </p>
+                
+                    <p>
+                        <label for="msg">mensagem <br></label>
+                        <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+                    </p>
+                
+                
+                        <p>
+                            <input type="submit" value="enviar">
+                            <input type="reset" value="limpar">
+                        </p>
+                        <h1> SOMANDO DOIS VALORES</h1>
+                        <p>
+                            <label for="n1">numero 1:</label>
+                            <input type="number" name="n1" id="n1" oninput="soma.innerHTML = Number(n1.value)+ Number(n2.value)" >
+                        </p>
+                        <p>
+                            <label for="n2">numero 2:</label>
+                            <input type="number" name="n2" id="n2" oninput="soma.innerHTML = Number(n1.value)+ Number(n2.value)">
+                        </p>
+                                
+                        <p>
+                            <label for="soma">Soma:</label>
+                            <output name="soma" id="soma">0</output>
+                        </p>
+                            <input type="submit" value="somar">
+                            <input type="reset" value="clear">
+        </form>
+
+<script>
+    function calcano(){
+        let atual = new Date().getFullYear()
+        dade.innerHTML = Number(atual)- Number(ano.value)
+    }
+</script>
+
+  </section>
+</body>
+</html>
